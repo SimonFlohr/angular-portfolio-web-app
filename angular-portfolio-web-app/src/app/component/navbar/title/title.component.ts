@@ -36,8 +36,8 @@ export class TitleComponent implements OnInit {
       // shape emerges from the background
       .add({
         targets: '#title-shape',
-        height: '40px',
-        duration: 180,
+        height: [0, 40],
+        duration: 120,
         easing: 'easeInOutQuad'
       }, '+=500')
 
@@ -46,50 +46,50 @@ export class TitleComponent implements OnInit {
         targets: '#title-first-name-s',
         translateX: ['0'],
         position: 'static',
-        duration: 400,
+        duration: 340,
         easing: 'easeOutElastic(1, .75)'
-      }, '+=120')
+      }, '+=80')
 
       // letter 'F' moves to the right
       .add({
         targets: '#title-last-name-f',
         translateX: ['-98px'],
         position: 'static',
-        duration: 400,
+        duration: 340,
         easing: 'easeOutElastic(1, 1)'
-      }, '-=250')
+      }, '-=310')
 
       // shape disappears in the background
       .add({
         targets: '#title-shape',
         height: '0',
-        duration: 200,
+        duration: 160,
         easing: 'easeInOutQuad'
-      }, '-=100')
+      }, '-=60')
 
       // letter 'F' moves to its final position
       .add({
         targets: '#title-last-name-f',
         translateX: ['0'],
-        duration: 400
-      }, '+=100')
+        duration: 340
+      })
 
       // remaining letters fade in
       .add({
         targets: '.letter-remaining',
         opacity: [0, 1],
-        duration: 200,
-        delay: anime.stagger(75, {from: 'first', direction: 'normal'}),
-        easing: 'easeInQuad'
-      }, '-=100')
+        duration: 120,
+        delay: anime.stagger(50, {from: 'first', direction: 'normal'}),
+        easing: 'easeInOutQuad'
+      }, '-=80')
 
       // designation fades in
       .add({
         targets: '#title-designation',
         opacity: [0, 1],
-        duration: 400,
+        duration: 330,
         easing: 'easeInOutQuad'
-      }, '+=100')
+      }, '+=10')
 
     }
   }

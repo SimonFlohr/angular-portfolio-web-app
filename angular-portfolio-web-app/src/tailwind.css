@@ -1,6 +1,52 @@
 @import "tailwindcss";
 
 /* Tailwind CSS theme variables */
-/* @theme {
-    
-} */
+@theme {
+    /* GENERAL VARIABLES */
+    /* typography */
+    --font-sans: "Sen", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-serif: "Crimson Pro", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+
+
+    /* LIGHT MODE */
+    /* color scheme */
+    --color-light-mode-primary: #5171B6;
+    --color-light-mode-primary-brighter: #6288dc;
+    --color-light-mode-primary-darker: #3a5183;
+
+    --color-light-mode-secondary: #FFE993;
+    --color-light-mode-secondary-brighter: #fff093;
+    --color-light-mode-secondary-darker: #ccba75;
+
+    --color-light-mode-extra-color-one: #c3d6ff;
+
+    --color-light-mode-bright: #EDEDED;
+    --color-light-mode-neutral: #AAAAAA;
+    --color-light-mode-shade: #272727;
+
+    /* filters */
+    --drop-shadow-light-theme: 3px 4px 12.3px 0 rgb(0 0 0 / 10%);
+
+
+    /* DARK MODE */
+    /* color scheme */
+    --color-dark-mode-primary: #5F8CEF;
+    --color-dark-mode-primary-brighter: #658bff;
+    --color-dark-mode-primary-darker: #4a6ebc;
+
+    --color-dark-mode-secondary: #FFE993;
+    --color-dark-mode-secondary-brighter: #fff093;
+    --color-dark-mode-secondary-darker: #ccba75;
+
+    --color-dark-mode-extra-color-one: #FFE993;
+    --color-dark-mode-extra-color-two: #717CB0;
+
+    --color-dark-mode-bright: #EDEDED;
+    --color-dark-mode-neutral: #B4BCD1;
+    --color-dark-mode-neutral-two: #606060;
+    --color-dark-mode-shade: #343A47;
+
+    /* filters */
+    --drop-shadow-dark-theme: 3px 4px 12.3px 0 rgb(256 256 256 / 10%);
+    --blur-dark-theme: 200px;
+}

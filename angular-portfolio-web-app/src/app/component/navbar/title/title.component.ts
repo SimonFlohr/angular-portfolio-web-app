@@ -20,8 +20,8 @@ export class TitleComponent implements OnInit {
     
     if (titleShape && letterS && letterF) {
       // hide letters
-      letterS.style.transform = 'translateX(-20px)';
-      letterF.style.transform = 'translateX(-130px)';
+      letterS.style.transform = 'translateX(-25px)';
+      letterF.style.transform = 'translateX(-160px)';
 
       // create animation timeline
       const timeline = anime.timeline({
@@ -36,10 +36,10 @@ export class TitleComponent implements OnInit {
       // shape emerges from the background
       .add({
         targets: '#title-shape',
-        height: [0, 40],
+        height: [0, 50],
         duration: 120,
-        easing: 'easeInOutQuad'
-      }, '+=500')
+        easing: 'easeInQuad'
+      }, '+=300')
 
       // letter 'S' moves to the right
       .add({
@@ -48,31 +48,23 @@ export class TitleComponent implements OnInit {
         position: 'static',
         duration: 340,
         easing: 'easeOutElastic(1, .75)'
-      }, '+=80')
+      }, '+=180')
 
       // letter 'F' moves to the right
       .add({
         targets: '#title-last-name-f',
-        translateX: ['-98px'],
+        translateX: ['-117px'],
         position: 'static',
         duration: 340,
         easing: 'easeOutElastic(1, 1)'
       }, '-=310')
-
-      // shape disappears in the background
-      .add({
-        targets: '#title-shape',
-        height: '0',
-        duration: 160,
-        easing: 'easeInOutQuad'
-      }, '-=60')
 
       // letter 'F' moves to its final position
       .add({
         targets: '#title-last-name-f',
         translateX: ['0'],
         duration: 340
-      })
+      },)
 
       // remaining letters fade in
       .add({
@@ -90,6 +82,14 @@ export class TitleComponent implements OnInit {
         duration: 330,
         easing: 'easeInOutQuad'
       }, '+=10')
+
+      // shape disappears in the background
+      .add({
+        targets: '#title-shape',
+        height: '0',
+        duration: 200,
+        easing: 'easeInQuad'
+      }, '+=100')
 
     }
   }

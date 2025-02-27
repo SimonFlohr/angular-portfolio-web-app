@@ -1,1 +1,14 @@
-<p>nav-desktop works!</p>
+<ul class="flex flex-col list-none font-semibold text-light-mode-neutral">
+    <a *ngFor="let item of menuItems" 
+       [routerLink]="item.route" 
+       routerLinkActive="active"
+       [routerLinkActiveOptions]="{exact: item.route === '/'}"
+       class="py-2 pr-2 cursor-pointer nav-item select-none" 
+       #navItem
+       draggable="false">
+        <li class="flex flex-row items-center select-none">
+            <div class="nav-line h-[1px] bg-light-mode-neutral mr-2" [ngClass]="{'!w-[75px] !bg-light-mode-primary-brighter': item.route === '/' ? location.path() === '' : location.path().includes(item.route)}"></div>
+            <p class="nav-text text-light-mode-neutral select-none" [ngClass]="{'!text-light-mode-primary-brighter': item.route === '/' ? location.path() === '' : location.path().includes(item.route)}">{{ item.name }}</p>
+        </li>
+    </a>
+</ul>

@@ -46,7 +46,7 @@ export class SocialsComponent implements AfterViewInit {
         opacity: [0, 1],
         translateY: [-4, 0],
         duration: 2000,
-        delay: 2300,
+        delay: 2100,
         easing: 'easeOutElastic(1, .8)',
         // enable pointer events when opacity reaches a reasonable threshold
         update: (anim) => {

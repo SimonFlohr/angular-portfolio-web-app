@@ -25,7 +25,7 @@
     --color-light-mode-shade: #272727;
 
     /* filters */
-    --drop-shadow-light-theme: 3px 4px 12.3px 0 rgb(0 0 0 / 10%);
+    --drop-shadow-light-theme: 4px 1px 12px rgb(0, 0, 0, 0.03);
 
 
     /* DARK MODE */
@@ -47,6 +47,6 @@
     --color-dark-mode-shade: #343A47;
 
     /* filters */
-    --drop-shadow-dark-theme: 3px 4px 12.3px 0 rgb(256 256 256 / 10%);
+    --drop-shadow-dark-theme: 4px 1px 12px rgb(0, 0, 0, 0.10);
     --blur-dark-theme: 200px;
 }

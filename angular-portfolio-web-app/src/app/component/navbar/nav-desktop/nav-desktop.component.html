@@ -7,7 +7,7 @@
        #navItem
        draggable="false">
         <li class="flex flex-row items-center select-none">
-            <div class="nav-line h-[1px] bg-light-mode-neutral mr-2" [ngClass]="{'!w-[75px] !bg-light-mode-primary-brighter': item.route === '/' ? location.path() === '' : location.path().includes(item.route)}"></div>
+            <div class="nav-line h-[1px] bg-light-mode-neutral mr-2" [ngClass]="{'!w-[55px] !bg-light-mode-primary-brighter': item.route === '/' ? location.path() === '' : location.path().includes(item.route)}"></div>
             <p class="nav-text text-light-mode-neutral select-none" [ngClass]="{'!text-light-mode-primary-brighter': item.route === '/' ? location.path() === '' : location.path().includes(item.route)}">{{ item.name }}</p>
         </li>
     </a>

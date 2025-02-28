@@ -80,8 +80,8 @@ export class SocialsComponent implements AfterViewInit {
         this.animations[id] = anime({
           targets: icon,
           translateY: -5,
-          duration: 400,
-          easing: 'easeOutBack'
+          duration: 300,
+          easing: 'easeOutExpo'
         });
       });
       
@@ -96,8 +96,8 @@ export class SocialsComponent implements AfterViewInit {
         this.animations[id] = anime({
           targets: icon,
           translateY: 0,
-          duration: 400,
-          easing: 'easeOutQuad',
+          duration: 300,
+          easing: 'easeOutExpo',
           complete: () => {
             // ensure the icon is back at its original position
             anime.set(icon, { translateY: 0 });

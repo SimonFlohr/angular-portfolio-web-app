@@ -85,7 +85,7 @@ export class NavDesktopComponent implements AfterViewInit {
       // skip animation setup for active links
       if (el.classList.contains('active')) {
         anime.set(line, {
-          width: '75px',
+          width: '55px',
           backgroundColor: primaryColor
         });
         
@@ -104,17 +104,16 @@ export class NavDesktopComponent implements AfterViewInit {
       el.addEventListener('mouseenter', () => {
         anime({
           targets: line,
-          width: '75px',
+          width: '55px',
           backgroundColor: primaryColor,
           duration: 300,
-          easing: 'easeOutQuad'
+          easing: 'easeOutExpo'
         });
         
         anime({
           targets: text,
           color: primaryColor,
-          duration: 300,
-          easing: 'easeOutQuad'
+          duration: 0
         });
       });
 
@@ -127,7 +126,7 @@ export class NavDesktopComponent implements AfterViewInit {
           width: '24px',
           backgroundColor: neutralColor,
           duration: 300,
-          easing: 'easeOutQuad'
+          easing: 'easeOutExpo'
         });
         
         anime({

@@ -50,7 +50,7 @@ export class HomeMainComponent implements AfterViewInit {
       translateY: [-4, 0],
       duration: 2000,
       delay: 2300,
-      easing: 'easeOutElastic(1, .8)',
+      easing: 'easeOutExpo',
       // enable pointer events when opacity reaches a reasonable threshold
       update: (anim) => {
         if (anim.progress > 55) {
